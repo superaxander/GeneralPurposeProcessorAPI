@@ -38,7 +38,7 @@ public class PostInitializationEvent extends GPPEvent
             }
             try
             {
-                Class<?> foundClass = Class.forName(classname, true, Reference.loader);
+                Class<?> foundClass = Class.forName(classname, true, Reference.loaders.get(pluginID));
                 Constructor<?> constructor = foundClass.getConstructor(args);
                 return Optional.of(constructor.newInstance(arguments));
             } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e)
