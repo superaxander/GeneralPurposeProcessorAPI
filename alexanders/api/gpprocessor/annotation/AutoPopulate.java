@@ -11,5 +11,7 @@ public @interface AutoPopulate
 {
     AutoPopulationType populationType() default AutoPopulationType.AUTO_DETECT;
 
+    String pluginID();
+
     Class<?> injectedClass() default AutoPopulate.class;
 }
