@@ -12,7 +12,7 @@ public abstract class PluginContainer
 
     public abstract boolean isAcceptingMessages();
 
-    public abstract void sendMessage(IPCMessage message);
+    public abstract void sendMessage(String sender, IPCMessage message);
 
     public abstract List<Thread> getThreads();
 
