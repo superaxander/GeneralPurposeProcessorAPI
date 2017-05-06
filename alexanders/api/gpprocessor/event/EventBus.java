@@ -1,12 +1,12 @@
 package alexanders.api.gpprocessor.event;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public abstract class EventBus
 {
-    protected Map<String, Map<String, ArrayList<Method>>> eventHandlerMap; // event, Map<pluginID, eventHandlerMethods>
+    protected Map<String, Map<String, List<Method>>> eventHandlerMap; // event, Map<pluginID, eventHandlerMethods>
 
     public abstract void register(String pluginID, Object eventHandler);
 
