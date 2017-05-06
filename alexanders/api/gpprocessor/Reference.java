@@ -7,4 +7,5 @@ public class Reference
 {
     public static Logger logger = Logger.getLogger("GPProcessor");
     public static Map<String, ClassLoader> loaders;
+    public static boolean running;
 }

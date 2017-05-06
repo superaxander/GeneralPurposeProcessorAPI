@@ -6,6 +6,8 @@ import alexanders.api.gpprocessor.Registry;
 import alexanders.api.gpprocessor.capability.Capability;
 import alexanders.api.gpprocessor.event.EventBus;
 
+import java.util.List;
+
 public abstract class PluginManager extends Registry<EventBus>
 {
     public static PluginManager instance;
@@ -22,7 +24,9 @@ public abstract class PluginManager extends Registry<EventBus>
 
     public abstract Registry<IComponent> componentRegistry();
 
-    private PluginManager()
+    public abstract List<Thread> getAssociatedThreads(String pluginID);
+
+    protected PluginManager()
     {
         super("EventBusRegistry", Reference.logger);
     }

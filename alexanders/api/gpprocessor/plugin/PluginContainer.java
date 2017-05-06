@@ -1,7 +1,5 @@
 package alexanders.api.gpprocessor.plugin;
 
-import java.util.List;
-
 public abstract class PluginContainer
 {
     public abstract String getName();
@@ -13,8 +11,6 @@ public abstract class PluginContainer
     public abstract boolean isAcceptingMessages();
 
     public abstract void sendMessage(String sender, IPCMessage message);
-
-    public abstract List<Thread> getThreads();
 
     public abstract String[] getDependencies();
 

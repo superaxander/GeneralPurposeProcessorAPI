@@ -1,8 +1,10 @@
 package alexanders.api.gpprocessor.event;
 
 import alexanders.api.gpprocessor.Pair;
+import alexanders.api.gpprocessor.Triplet;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -25,4 +27,5 @@ public abstract class EventBus
         return getClass().getSimpleName();
     }
 
+    public static final ArrayList<Triplet<GPPEvent, Object, Method>> scheduledEvents = new ArrayList<>();
 }
