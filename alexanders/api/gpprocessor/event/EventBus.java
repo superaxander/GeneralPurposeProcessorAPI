@@ -1,20 +1,24 @@
 package alexanders.api.gpprocessor.event;
 
+import alexanders.api.gpprocessor.Pair;
+
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
 
 public abstract class EventBus
 {
-    protected Map<String, Map<String, List<Method>>> eventHandlerMap; // event, Map<pluginID, eventHandlerMethods>
+    protected Map<String, Map<String, List<Pair<Object, Method>>>> eventHandlerMap;
 
     public abstract void register(String pluginID, Object eventHandler);
 
-    public abstract void register(String pluginID, Method eventHandlerMethod);
+    public abstract void register(String pluginID, Object eventHandler, Method eventHandlerMethod);
 
-    protected abstract void register(String pluginID, Method eventHandlerMethod, String event);
+    protected abstract void register(String pluginID, Object eventHandler, Method eventHandlerMethod, String event);
 
     public abstract void fireEvent(GPPEvent event);
+
+    public abstract void fireEventAt(String pluginID, GPPEvent event);
 
     public String getID()
     {
