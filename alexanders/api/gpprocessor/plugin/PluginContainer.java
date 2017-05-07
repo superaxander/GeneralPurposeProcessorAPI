@@ -15,4 +15,8 @@ public abstract class PluginContainer
     public abstract String[] getDependencies();
 
     public abstract Class<?> getPluginClass();
+
+    public abstract Object getInstance();
+
+    public abstract PluginMetadata getMetadata();
 }
