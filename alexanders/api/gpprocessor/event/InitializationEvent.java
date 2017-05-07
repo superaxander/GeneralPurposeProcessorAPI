@@ -6,6 +6,10 @@ import java.util.Map;
 
 public class InitializationEvent extends GPPEvent
 {
+    public InitializationEvent()
+    {
+    }
+
     private Map<String, LoadState> plugins;
 
     public InitializationEvent(Map<String, LoadState> plugins)

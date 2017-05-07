@@ -15,6 +15,10 @@ public class PostInitializationEvent extends GPPEvent
 {
     private Map<String, LoadState> plugins;
 
+    public PostInitializationEvent()
+    {
+    }
+
     public PostInitializationEvent(Map<String, LoadState> plugins)
     {
         this.plugins = plugins;

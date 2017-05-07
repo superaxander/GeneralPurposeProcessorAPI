@@ -4,6 +4,10 @@ public class EventBusRegistrationEvent extends GPPEvent
 {
     private EventBus newEventBus;
 
+    public EventBusRegistrationEvent()
+    {
+    }
+
     public EventBusRegistrationEvent(EventBus newEventBus)
     {
         this.newEventBus = newEventBus;

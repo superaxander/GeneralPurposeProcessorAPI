@@ -13,6 +13,10 @@ public class IPCEvent extends GPPEvent
         this.sender = sender;
     }
 
+    public IPCEvent()
+    {
+    }
+
     public IPCMessage getMessage()
     {
         return message;

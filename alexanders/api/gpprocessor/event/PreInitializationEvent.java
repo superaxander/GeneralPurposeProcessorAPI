@@ -15,6 +15,10 @@ public class PreInitializationEvent extends GPPEvent
     private PluginMetadata metadata;
     private Map<String, LoadState> plugins;
 
+    public PreInitializationEvent()
+    {
+    }
+
     public PreInitializationEvent(Logger logger, File configurationFolder, File configurationFile, PluginMetadata metadata, Map<String, LoadState> plugins)
     {
         this.logger = logger;
