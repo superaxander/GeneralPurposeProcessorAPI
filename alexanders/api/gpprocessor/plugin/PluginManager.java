@@ -26,6 +26,8 @@ public abstract class PluginManager extends Registry<EventBus>
 
     public abstract List<Thread> getAssociatedThreads(String pluginID);
 
+    public abstract void requestShutdown();
+
     protected PluginManager()
     {
         super("EventBusRegistry", Reference.logger);
