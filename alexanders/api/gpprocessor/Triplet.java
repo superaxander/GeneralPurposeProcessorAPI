@@ -1,7 +1,5 @@
 package alexanders.api.gpprocessor;
 
-import java.util.function.BiConsumer;
-
 public class Triplet<L, M, R>
 {
     public L left;
