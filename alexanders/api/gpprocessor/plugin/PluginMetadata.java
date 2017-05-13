@@ -1,6 +1,6 @@
 package alexanders.api.gpprocessor.plugin;
 
-public class PluginMetadata
+public class PluginMetadata implements Cloneable
 {
     public String name;
     public String ID;
