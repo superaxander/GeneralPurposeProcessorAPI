@@ -20,4 +20,17 @@ public class PluginMetadata
         this.author = author;
         this.description = description;
     }
+
+    @Override
+    public PluginMetadata clone()
+    {
+        try
+        {
+            return (PluginMetadata) super.clone();
+        } catch (CloneNotSupportedException e)
+        {
+            e.printStackTrace();
+        }
+        return new PluginMetadata(name, ID, version, author, description);
+    }
 }
