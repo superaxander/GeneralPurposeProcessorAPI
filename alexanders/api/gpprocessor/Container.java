@@ -6,6 +6,7 @@ public class Container<V>
 
     public Container()
     {
+        value = null;
     }
 
     public Container(V value)

@@ -19,4 +19,6 @@ public abstract class PluginContainer
     public abstract Object getInstance();
 
     public abstract PluginMetadata getMetadata();
+    
+    public abstract ClassLoader getClassLoader();
 }
